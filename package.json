@@ -1,0 +1,28 @@
+{
+  "name": "redux-form-field-arrays-example",
+  "description": "Field Arrays Example using Redux Form",
+  "version": "0.0.0",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "file-saver": "^2.0.2",
+    "qs": "^6.9.1",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-icons": "^3.9.0",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-form": "7.0.4",
+    "redux-form-website-template": "0.0.41",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080"
+}
