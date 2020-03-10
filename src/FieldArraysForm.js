@@ -2,6 +2,8 @@ import React from 'react';
 import { Field, FieldArray, reduxForm } from 'redux-form';
 import validate from './validate';
 import { MdAdd } from 'react-icons/md';
+
+import './styles/global.css'
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div>
     <label>{label}</label>
@@ -14,14 +16,14 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 
 const renderSimbolos = ({ fields, meta: { error } }) => (
   <ul>
-    <li>
-      <button type="button" onClick={() => fields.push()} >
-        <MdAdd size={24} color='#FFF' />
+    <li >
+      <button type="button" onClick={() => fields.push()} id="btnAutomato">
         Add Simbolo</button>
     </li>
     {fields.map((simbolo, index) => (
       <li key={index}>
         <button
+          id="btnAutomato"
           type="button"
           title="Remover Simbolo"
           onClick={() => fields.remove(index)}
@@ -46,19 +48,21 @@ const renderSimbolos = ({ fields, meta: { error } }) => (
 
 const renderEstados = ({ fields, meta: { touched, error, submitFailed } }) => (
   <ul>
-    <li>
-      <button type="button" onClick={() => fields.push({})}>Add Estado</button>
+    <li >
+      <button type="button" onClick={() => fields.push({})} id="btnAutomato">Add Estado</button>
       {(touched || submitFailed) && error && <span>{error}</span>}
     </li>
     {fields.map((estado, index) => (
       <li key={index}>
         <button
+          id="btnAutomato"
           type="button"
           title="Remover Estado"
           onClick={() => fields.remove(index)}
         />
         <h4>Estado {index + 1}</h4>
         <Field
+        id="fundo"
           name={`${estado}.name`}
           type="text"
           component={renderField}
@@ -121,7 +125,7 @@ const renderEstados = ({ fields, meta: { touched, error, submitFailed } }) => (
 const renderAutomato = ({ fields, meta: { touched, error, submitFailed } }) => (
   <ul>
     <li>
-      <button type="button" onClick={() => fields.push({})}>Criar Automato</button>
+      <button type="button" id="btnAutomato" onClick={() => fields.push({})} >Criar Automato</button>
       {(touched || submitFailed) && error && <span>{error}</span>}
     </li>
      {fields.map((automato, index) => (
@@ -170,9 +174,9 @@ const FieldArraysForm = props => {
     <form onSubmit={handleSubmit}>
       <FieldArray name="automato" component={renderAutomato} />
       <div>
-        <button type="submit" disabled={submitting}>Enviar</button>
-        <button type="button" disabled={pristine || submitting} onClick={reset}>
-          Limpar valores
+        <button type="submit" disabled={submitting} id="btnAutomato">Criar Còdigo</button>
+        <button type="button" disabled={pristine || submitting} onClick={reset} id="btnAutomato">
+          Resetar Autômato
         </button>
       </div>
     </form>

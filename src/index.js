@@ -3,21 +3,22 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { Values } from "redux-form-website-template";
 import store from "./store";
-import showResults from "./showResults";
 import FieldArraysForm from "./FieldArraysForm";
 import chamaAPI from "./chamaAPI";
-import saveFile from "./saveFile";
 
 
+import './styles/global.css'
 
 const rootEl = document.getElementById("root");
 
 ReactDOM.render(
   <Provider store={store}>
-    <div style={{ padding: 15 }}>
-      <h2>Automato Generator</h2>
+    <div id="menu">
+      <h2 id="jooj">Automato Generator</h2>
       <FieldArraysForm onSubmit={chamaAPI} />
-      <Values form="fieldArrays" />
+      <section id="menus">
+      <Values form="fieldArrays"  />
+      </section>
     </div>
   </Provider>,
   rootEl

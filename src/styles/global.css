@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap');
+
+
+*{
+    margim: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root{
+    height: 100%;
+}
+
+body{
+    background: #E5E6F0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, button{
+    font-family: 'Orbitron', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+button {
+    width: 180px;
+    height: 60px;
+    border-radius: 18px;
+    background: #3b5bfd;
+    border: 0;
+    cursor: pointer;
+    font-size: 120px;
+    color: white;
+    box-shadow: black;
+    
+  }
+  #btnAutomato{
+    width: 220px;
+    height: 60px;
+    border-radius: 18px;
+    background-image: linear-gradient(to right bottom, #4f90f2, #397ccf, #2568ac, #15548b, #09416b);
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    box-shadow: black;
+  }
+
+#jooj {
+    height: 80px;
+    padding: 0 30px;
+    background-image: linear-gradient(to right bottom, #0c52bb, #0055af, #0057a2, #005894, #1d5885);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#fundo{
+    background-color: red;
+}
+
+#menus{
+    background-color: black;
+    color: green;
+    text-shadow: n;
+
+}
+
+#menus,h2{
+    color: green;
+}
