@@ -17,7 +17,8 @@ ReactDOM.render(
       <h2 id="jooj">Automato Generator</h2>
       <FieldArraysForm onSubmit={chamaAPI} />
       <section id="menus">
-      <Values form="fieldArrays"  />
+      <Values 
+      form="fieldArrays" />
       </section>
     </div>
   </Provider>,

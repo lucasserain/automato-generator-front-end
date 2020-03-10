@@ -66,13 +66,13 @@ button {
     background-color: red;
 }
 
-#menus{
-    background-color: black;
-    color: green;
-    text-shadow: n;
+#menus {
+    background-color: white;
+    text-shadow: none;
+    color: blanchedalmond !important;
 
 }
 
 #menus,h2{
-    color: green;
+    color: #0c52bb;
 }
